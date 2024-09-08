@@ -3,10 +3,12 @@ package com.mall.xiaomi.pojo;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Data
 @Table(name = "product")
-public class Product {
+public class Product implements Serializable {
+    private static final long serialVersionID = 42L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "JDBC")
     private Integer productId;

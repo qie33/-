@@ -11,4 +11,6 @@ public class RedisKey {
     public final static String SECKILL_PRODUCT_STOCK = "seckill:product:stock:id:";
     public final static String SECKILL_PRODUCT_USER_LIST = "seckill:product:user:list";
     public final static String SECKILL_RABBITMQ_ID = "seckill:rabbitmq:id";
+    public final static String PRODUCT_CATEGORY_ID = "product:category:id";
+    public final static String PRODUCT_ID = "product:id";
 }

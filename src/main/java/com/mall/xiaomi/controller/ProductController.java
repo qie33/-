@@ -30,7 +30,6 @@ public class ProductController {
         List<Product> list = productService.getProductByCategoryId(categoryId);
         resultMessage.success("001", list);
         return resultMessage;
-
     }
 
     @GetMapping("/category/hot")

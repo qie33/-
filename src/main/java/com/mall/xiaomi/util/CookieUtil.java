@@ -140,6 +140,14 @@ public final class CookieUtil {
 			if(httpOnly != null) {
 				cookie.setHttpOnly(httpOnly);
 			}
+
+			cookie.setSecure(request.isSecure());
+
+			response.setHeader("Set-Cookie", String.format("%s=%s; Path=/; Max-Age=%d; %s %s",
+					cookieName, cookieValue, cookieMaxAge,
+					request.isSecure() ? "Secure;" : "",
+					"SameSite=Lax"));
+
 			response.addCookie(cookie);
 		} catch (Exception e) {
 			logger.error("Cookie Encode Error.", e);
